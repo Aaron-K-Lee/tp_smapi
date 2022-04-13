@@ -1,0 +1,19 @@
+
+# Name of the module.
+modname=tp_smapi
+
+# Version of the module.
+modver=0.43
+
+# Space-separated list of paths of the built kernel objects.
+built_modules='tp_smapi.ko thinkpad_ec.ko'
+
+# Additional build dependencies (kernel dev package is installed implicitly).
+#makedepends=
+
+# A custom build function may be defined. The following is the default_build.
+build() {
+ 	mkdir $builddir/extra
+	touch "$builddir"/Makefile
+	make -C $kernel_srcdir src=$srcdir M=$builddir HDAPS=1
+}
