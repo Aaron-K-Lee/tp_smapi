@@ -1,3 +1,7 @@
+# To install, place tp_smapi folder in /usr/src (or another directory specified in /etc/akms.conf) and run "akms install tp_smapi"
+# You may need to specifiy the kernel version with the "-k" flag
+# Ensure linux-headers, alpine-sdk, and linux-lts-dev are installed, if you are using the lts kernel. If you aren't, you should know what you're doing anyway, so I'm not going to be so arrogant as to assume that I know what I'm talking about better than you do.
+# This file is pretty basic, so if you need to customise stuff or whatever just run make or something. This works fine for me, and likely no-one's ever going to use this apart from me anyway, so yeah
 
 # Name of the module.
 modname=tp_smapi
